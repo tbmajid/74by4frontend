@@ -49,7 +49,7 @@ const Cart = () => {
 
   return (
     <div
-      className="w-screen mb-1 fixed top-0 right-0 z-50 overflow-scroll  ease-in-out bg-white"
+      className="w-screen h-screen mb-1 fixed top-0 right-0 z-50 overflow-scroll  ease-in-out bg-white"
       ref={cartRef}
     >
       <div className="h-screen float-right py-10 px-2.5 bg-white relative">
