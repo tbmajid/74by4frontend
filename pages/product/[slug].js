@@ -19,7 +19,7 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div>
-      <div className="flex sm:flex-col md:flex-col lg:flex-row  justify-center lg:gap-40 m-20 mb-1">
+      <div className="flex flex-col md:flex-row  justify-center sm:gap-40 m-20 mb-1">
         <div>
           <div>
             <img
@@ -90,7 +90,7 @@ const ProductDetails = ({ product, products }) => {
               <span onClick={decQty}>
                 <AiFillMinusSquare size={32} />
               </span>
-              <span className=" w-6 text-center mt-0 pt-0">{qty}</span>
+              <span className="w-6 text-center mt-0 pt-0">{qty}</span>
               <span onClick={incQty}>
                 <AiFillPlusSquare size={32} />
               </span>

@@ -49,10 +49,10 @@ const Cart = () => {
 
   return (
     <div
-      className="w-screen overflow-scroll mb-1 fixed top-0 right-0  ease-in-out"
+      className="w-screen mb-1 fixed top-0 right-0 z-50 overflow-scroll  ease-in-out bg-white"
       ref={cartRef}
     >
-      <div className="h-screen w-100 float-right py-10 px-2.5 bg-white relative">
+      <div className="h-screen float-right py-10 px-2.5 bg-white relative">
         <button
           type="button"
           className="flex items-center text-xl font-bold cursor-pointer gap-0.5 bg-transparent border-0"
@@ -85,10 +85,7 @@ const Cart = () => {
         <div className="mt-2.5">
           {cartItems.length >= 1 &&
             cartItems.map((item) => (
-              <div
-                className="flex gap-7 p-5 h-3/4 overflow-scroll"
-                key={item._id}
-              >
+              <div className="flex gap-7 p-5 overflow-scroll" key={item._id}>
                 <img
                   src={urlFor(item?.image[0])}
                   className=" w-36 h-32 bg-white"
