@@ -47,6 +47,8 @@ const Cart = () => {
     stripe.redirectToCheckout({ sessionId: data.id });
   };
 
+  // const calculateVAT = () =>()
+
   return (
     <div
       className="w-screen h-screen mb-1 fixed top-0 right-0 z-50 overflow-scroll  ease-in-out bg-white"
@@ -86,14 +88,11 @@ const Cart = () => {
           {cartItems.length >= 1 &&
             cartItems.map((item) => (
               <div className="flex gap-7 p-5 overflow-scroll" key={item._id}>
-                <img
-                  src={urlFor(item?.image[0])}
-                  className=" w-36 h-32 bg-white"
-                />
-                <div className="w-52">
-                  <div className="flex flex-wrap gap-2.5">
+                <img src={urlFor(item?.image[0])} className="w-48 h-auto" />
+                <div className=" w-auto">
+                  <div className="flex flex-col flex-wrap gap-2.5">
                     <div className="text-lg">{item.name}</div>
-                    <br /> <div className="text-sm  mt-1">{item.size}</div>
+                    <br /> <div className="text-sm">Size: {item.size}</div>
                     <div>
                       {" "}
                       <div className="text-base p-1">£{item.price}</div>
@@ -117,23 +116,36 @@ const Cart = () => {
                           <AiFillPlusSquare size={32} />
                         </span>
                       </p>
+                      <button
+                        type="button"
+                        className="text-xs border-none cursor-pointer bg-transparent"
+                        onClick={() => onRemove(item)}
+                      >
+                        Remove
+                      </button>
                     </div>
                   </div>
                 </div>
-                <button
-                  type="button"
-                  className="text-xs border-none cursor-pointer bg-transparent"
-                  onClick={() => onRemove(item)}
-                >
-                  Remove Items
-                </button>
               </div>
             ))}
         </div>
         {cartItems.length >= 1 && (
-          <div className=" w-full mb-1 pr-8 cursor-pointer bg-white">
-            <div className="flex">
-              <h3 className="text-xl pl-5">Subtotal:&nbsp; </h3>
+          <div className="w-full mb-1 pr-8 cursor-pointer">
+            <hr></hr>
+            <div className="flex justify-between mt-2">
+              <h4 className="text-sm pl-5">Subtotal&nbsp; </h4>
+              <h3 className="text-sm">£{totalPrice}</h3>
+            </div>
+            <div className="flex justify-between">
+              <h4 className="text-sm pl-5">Shipping&nbsp; </h4>
+              <h3 className="text-sm">FREE</h3>
+            </div>
+            <div className="flex justify-between">
+              <h4 className="text-sm pl-5">VAT (Included) </h4>
+              <h3 className="text-sm">£{Math.round(0.2 * totalPrice)}</h3>
+            </div>
+            <div className="flex justify-between">
+              <h3 className="text-xl pl-5">Total </h3>
               <h3 className="text-xl">£{totalPrice}</h3>
             </div>
             <div className="w-72 m-auto">
