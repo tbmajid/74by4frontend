@@ -87,7 +87,10 @@ const Cart = () => {
         <div className="mt-2.5">
           {cartItems.length >= 1 &&
             cartItems.map((item) => (
-              <div className="flex gap-7 p-5 overflow-scroll" key={item._id}>
+              <div
+                className="flex flex-col md:flex-row gap-7 p-5 overflow-scroll"
+                key={item._id}
+              >
                 <img src={urlFor(item?.image[0])} className="w-48 h-auto" />
                 <div className=" w-auto">
                   <div className="flex flex-col flex-wrap gap-2.5">
