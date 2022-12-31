@@ -93,12 +93,12 @@ const Cart = () => {
               >
                 <img src={urlFor(item?.image[0])} className="w-48 h-auto" />
                 <div className=" w-auto">
-                  <div className="flex flex-col flex-wrap gap-2.5">
-                    <div className="text-lg">{item.name}</div>
-                    <br /> <div className="text-sm">Size: {item.size}</div>
+                  <div className="flex flex-col flex-wrap gap-1">
+                    <div className="text-2xl">{item.name}</div>
+                    <div className="text-sm">Size: {item.size}</div>
                     <div>
                       {" "}
-                      <div className="text-base p-1">£{item.price}</div>
+                      <div className="text-xl p-1">£{item.price}</div>
                     </div>
                   </div>
 
