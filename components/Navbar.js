@@ -10,7 +10,7 @@ const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
 
   return (
-    <div className="flex justify-between my-1 mx-2 relative">
+    <div className="flex justify-between my-1 mx-0 md:mx-2 relative">
       <p>
         <Link href="/">
           <a>

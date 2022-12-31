@@ -3,9 +3,9 @@ import Link from "next/link";
 import {
   AiOutlineLeft,
   AiOutlineShopping,
-  AiFillMinusSquare,
-  BsTrashFill,
-  AiFillPlusSquare,
+  AiFillMinusCircle,
+  AiOutlineMinusCircle,
+  AiOutlinePlusCircle,
 } from "react-icons/ai";
 
 import toast from "react-hot-toast";
@@ -61,7 +61,7 @@ const Cart = () => {
           onClick={() => setShowCart(false)}
         >
           <AiOutlineLeft />
-          <span>Your Cart</span>
+          <span>Your Basket</span>
 
           <span className="ml-2.5 text-rose-600">
             ({totalQuantities} items)
@@ -106,7 +106,7 @@ const Cart = () => {
                     <div>
                       <p className="flex justify-center items-center">
                         <span onClick={() => onMinus(item)}>
-                          <AiFillMinusSquare size={32} />
+                          <AiOutlineMinusCircle size={32} />
                         </span>
                         <span
                           className="w-6 border-r-2 border-gray-400 text-lg text-center"
@@ -116,7 +116,7 @@ const Cart = () => {
                           {item.quantity}
                         </span>
                         <span onClick={() => onPlus(item, 1)}>
-                          <AiFillPlusSquare size={32} />
+                          <AiOutlinePlusCircle size={32} />
                         </span>
                       </p>
                       <button
@@ -140,7 +140,7 @@ const Cart = () => {
               <h3 className="text-sm">£{totalPrice}</h3>
             </div>
             <div className="flex justify-between">
-              <h4 className="text-sm pl-5">Shipping&nbsp; </h4>
+              <h4 className="text-sm pl-5">Delivery </h4>
               <h3 className="text-sm">FREE</h3>
             </div>
             <div className="flex justify-between">
@@ -154,7 +154,7 @@ const Cart = () => {
             <div className="w-72 m-auto">
               <button
                 type="button"
-                className="w-full max-w-lg p-3 z-40 mb-2 border-none text-xl mt-3 bg-black text-white cursor-pointer scale-100"
+                className="w-full border-solid rounded-lg max-w-lg p-3 z-40 mb-2 border-none text-xl mt-3 bg-black text-white cursor-pointer scale-100"
                 onClick={handleCheckout}
               >
                 Check Out

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiFillMinusSquare, AiFillPlusSquare } from "react-icons/ai";
+import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 
 import { client, urlFor } from "../../lib/client";
 
@@ -24,7 +24,7 @@ const ProductDetails = ({ product, products }) => {
           <div>
             <img
               src={urlFor(image && image[index])}
-              className="w-96 h-96 cursor-pointer self-center"
+              className="max-w-sm cursor-pointer self-center"
             />
           </div>
           <div className="flex gap-2.5 mt-3">
@@ -49,37 +49,49 @@ const ProductDetails = ({ product, products }) => {
           <div className="text-sm py-3">Product Description: </div>
           <p>{details}</p>
           <p>
-            <div className="p-1 text-sm mt-1">Select Size: </div>
+            <div className="p-1 text-sm mt-2">Select Size: </div>
             <div className="flex">
               <button
                 className={
                   size === 0
-                    ? "mb-2 p-2 m-1 border-none text-lg mt-3 bg-red-600 text-white cursor-pointer"
-                    : "mb-2 p-2 m-1 border-none text-lg mt-3 bg-black text-white cursor-pointer"
+                    ? "mb-2 p-2 m-1 rounded-lg text-lg mt-3 bg-white border-solid border-blue-600 cursor-pointer"
+                    : "shadow-none rounded-lg mb-2 p-2 m-1 border-solid border-slate-200 bg-white text-lg mt-3 cursor-pointer"
                 }
                 onClick={() => setSize(0)}
               >
                 A4
+                <br />
+                <span className="text-sm"> 21 x 29.7 cm</span>
+                <br />
+                <span className="text-sm"> 16.5 x 23.4 inches</span>
               </button>
               <button
                 className={
                   size === 1
-                    ? "mb-2 p-2 m-1 border-none text-lg mt-3 bg-red-600 text-white cursor-pointer"
-                    : "mb-2 p-2 m-1 border-none text-lg mt-3 bg-black text-white cursor-pointer"
+                    ? "mb-2 p-2 m-1 rounded-lg text-lg mt-3 bg-white border-solid border-blue-600 cursor-pointer"
+                    : "shadow-none rounded-lg mb-2 p-2 m-1 border-solid border-slate-200 bg-white text-lg mt-3 cursor-pointer"
                 }
                 onClick={() => setSize(1)}
               >
                 A3
+                <br />
+                <span className="text-sm"> 21 x 29.7 cm</span>
+                <br />
+                <span className="text-sm"> 16.5 x 23.4 inches</span>
               </button>
               <button
                 className={
                   size === 2
-                    ? "mb-2 p-2 m-1 border-none text-lg mt-3 bg-red-600 text-white cursor-pointer"
-                    : "mb-2 p-2 m-1 border-none text-lg mt-3 bg-black text-white cursor-pointer"
+                    ? "mb-2 p-2 m-1 rounded-lg text-lg mt-3 bg-white border-solid border-blue-600 cursor-pointer"
+                    : "shadow-none rounded-lg mb-2 p-2 m-1 border-solid border-slate-200 bg-white text-lg mt-3 cursor-pointer"
                 }
                 onClick={() => setSize(2)}
               >
                 A2
+                <br />
+                <span className="text-sm"> 21 x 29.7 cm</span>
+                <br />
+                <span className="text-sm"> 16.5 x 23.4 inches</span>
               </button>
             </div>
           </p>
@@ -88,25 +100,25 @@ const ProductDetails = ({ product, products }) => {
             <h3>Quantity:</h3>
             <p className="flex justify-center items-center">
               <span onClick={decQty}>
-                <AiFillMinusSquare size={32} />
+                <AiOutlineMinusCircle size={32} />
               </span>
               <span className="w-6 text-center mt-0 pt-0">{qty}</span>
               <span onClick={incQty}>
-                <AiFillPlusSquare size={32} />
+                <AiOutlinePlusCircle size={32} />
               </span>
             </p>
           </div>
           <div className="flex gap-2">
             <button
               type="button"
-              className="p-2 border-2 border-solid mt-2 text-xl font-bold cursor-pointer w-44"
+              className="p-2 border-none  bg-black text-white rounded-lg mt-5 text-xl cursor-pointer w-44"
               onClick={() => onAdd(product, qty)}
             >
-              Add to Cart
+              Add to Basket
             </button>
             <button
               type="button"
-              className="p-2 border-2 border-solid mt-2 text-xl font-bold cursor-pointer w-44"
+              className="p-2 bg-black text-white border-none rounded-lg mt-5 text-xl  cursor-pointer w-44"
               onClick={handleBuyNow}
             >
               Buy Now
