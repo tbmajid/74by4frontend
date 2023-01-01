@@ -21,7 +21,7 @@ const ProductDetails = ({ product, products }) => {
     <div>
       <div className="flex flex-col md:flex-row justify-start sm:gap-40 m-20 ml-5 md:ml-20 mb-1">
         <div>
-          <div>
+          <div className="ml-0 pl-0">
             <img
               src={urlFor(image && image[index])}
               className="max-w-sm cursor-pointer self-center"
@@ -45,7 +45,7 @@ const ProductDetails = ({ product, products }) => {
 
         <div>
           <h1>{name}</h1>
-
+          <div className="text-sm py-3">Visual Art by: T Majid </div>
           <div className="text-sm py-3">Product Description: </div>
           <p>{details}</p>
           <p>

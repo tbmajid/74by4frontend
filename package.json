@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.9.2",
+    "@next/font": "^13.1.1",
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
     "@stripe/stripe-js": "^1.42.0",
