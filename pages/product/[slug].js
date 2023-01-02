@@ -21,7 +21,7 @@ const ProductDetails = ({ product, products }) => {
     <div>
       <div className="flex flex-col md:flex-row justify-start sm:gap-40 m-20 ml-5 md:ml-20 mb-1">
         <div>
-          <div className="ml-0 pl-0">
+          <div className="max-w-xs md:max-w-full ml-0 pl-0">
             <img
               src={urlFor(image && image[index])}
               className="max-w-sm cursor-pointer self-center"
@@ -34,8 +34,8 @@ const ProductDetails = ({ product, products }) => {
                 src={urlFor(item)}
                 className={
                   i === index
-                    ? "cursor-pointer w-16 h-16"
-                    : "cursor-pointer w-16 h-16 bg-red-900"
+                    ? "cursor-pointer w-16 h-16 border-solid border-blue-600"
+                    : "cursor-pointer w-16 h-16 "
                 }
                 onMouseEnter={() => setIndex(i)}
               />
@@ -44,12 +44,12 @@ const ProductDetails = ({ product, products }) => {
         </div>
 
         <div>
-          <h1>{name}</h1>
+          <div className=" text-3xl mt-3">{name}</div>
           <div className="text-sm py-3">Visual Art by: T Majid </div>
           <div className="text-sm py-3">Product Description: </div>
           <p>{details}</p>
           <p>
-            <div className="p-1 text-sm mt-2">Select Size: </div>
+            <div className="p-1 text-sm mt-3">Select Size: </div>
             <div className="flex">
               <button
                 className={
@@ -95,7 +95,7 @@ const ProductDetails = ({ product, products }) => {
               </button>
             </div>
           </p>
-          <p className="font-bold text-2xl lg:mt-12">£{price[size]}</p>
+          <p className="font-bold text-2xl mt-12">£{price[size]}</p>
           <div className="flex gap-5 mt-3 items-center text-xl">
             <h3>Quantity:</h3>
             <p className="flex justify-center items-center">
@@ -108,7 +108,7 @@ const ProductDetails = ({ product, products }) => {
               </span>
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 mb-2">
             <button
               type="button"
               className="p-2 border-none  bg-black text-white rounded-lg mt-5 text-xl cursor-pointer w-44"

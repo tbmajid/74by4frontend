@@ -1,6 +1,6 @@
 import { AiOutlineGoogle } from "react-icons/ai";
 import {
-  FaCcApplePay,
+  FaApplePay,
   FaGooglePay,
   FaCcVisa,
   FaCcStripe,
@@ -14,16 +14,6 @@ const Footer = () => {
       <p>2022 74by4.com All rights reserverd</p>
       <div className="flex">
         <span className="p-1">
-          <FaGooglePay size={50} />
-        </span>
-        <span className="p-1">
-          {" "}
-          <FaCcApplePay size={50} />
-        </span>
-        <span className="p-1">
-          <FaCcStripe size={50} />
-        </span>
-        <span className="p-1">
           <FaCcVisa size={50} />
         </span>
         <span className="p-1">
@@ -31,6 +21,14 @@ const Footer = () => {
         </span>
         <span className="p-1">
           <FaCcAmex size={50} />
+        </span>
+        <span className="p-1">
+          {" "}
+          <FaApplePay size={50} />
+        </span>
+
+        <span className="p-1">
+          <FaGooglePay size={50} />
         </span>
       </div>
     </div>
