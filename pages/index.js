@@ -12,11 +12,10 @@ const Home = ({ products }) => (
         </h2>
         <p className="text-md text-white p-2 font-light max-w-md">
           Our posters are created from quality materials printed in the United
-          Kingdom. The museum-grade paper ensures that any design won't corrode
-          with time. The pigment inks used to represent various colours are
-          bright and intense. These posters are hangable with double-sided tape,
-          tacks, or via framing. .: 175 gsm fine art paper .: For indoor use .:
-          Multiple sizes .: Free and fast delivery to the UK
+          Kingdom. The museum-grade paper ensures that any design will not
+          corrode with time. The pigment inks used to represent various colours
+          are bright and intense. These posters are hangable with double-sided
+          tape,
         </p>
       </div>
 
