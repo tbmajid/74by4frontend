@@ -21,12 +21,11 @@ const ProductDetails = ({ product, products }) => {
     <div>
       <div className="flex flex-col md:flex-row justify-start sm:gap-40 m-20 ml-5 md:ml-20 mb-1">
         <div>
-          <div className="w-4/5 lg:w-full">
-            <img
-              src={urlFor(image && image[index])}
-              className="max-w-sm cursor-pointer self-center"
-            />
-          </div>
+          <img
+            src={urlFor(image && image[index])}
+            className=" w-4/5 sm:w-full cursor-pointer self-center"
+          />
+
           <div className="flex gap-2.5 mt-3">
             {image?.map((item, i) => (
               <img
