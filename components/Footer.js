@@ -11,8 +11,8 @@ import {
 const Footer = () => {
   return (
     <div className=" flex flex-col justify-center items-center  mt-9">
-      <p>2022 74by4.com All rights reserverd</p>
-      <div className="flex">
+      <p>&copy; 2022 74by4.com All rights reserverd</p>
+      <div className="flex mt-2">
         <span className="p-1">
           <FaCcVisa size={50} />
         </span>

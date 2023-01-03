@@ -7,7 +7,8 @@ export default async function handler(req, res) {
   const user = session?.user;
   console.log(user);
   if (user) {
-    const stripeId = user["http://localhost:3000/stripe_customer_id"];
+    const stripeId =
+      user["https://74by4frontend.vercel.app/stripe_customer_id"];
     if (req.method === "POST") {
       try {
         // Create Checkout Sessions from body params.

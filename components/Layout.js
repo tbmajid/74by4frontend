@@ -41,9 +41,9 @@ const Layout = ({ children }) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap"
           rel="stylesheet"
-        ></link>
+        />
       </Head>
       <header>
         <Navbar />
