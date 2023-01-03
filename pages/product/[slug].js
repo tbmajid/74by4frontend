@@ -23,7 +23,7 @@ const ProductDetails = ({ product, products }) => {
         <div>
           <img
             src={urlFor(image && image[index])}
-            className=" w-4/5 sm:w-full cursor-pointer self-center"
+            className="w-auto cursor-pointer self-center"
           />
 
           <div className="flex gap-2.5 mt-3">
