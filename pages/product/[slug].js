@@ -46,10 +46,10 @@ const ProductDetails = ({ product, products }) => {
           <div className=" text-3xl mt-3">{name}</div>
           <div className="text-sm py-3">Visual Art by: T Majid </div>
           <div className="text-sm py-3">Product Description: </div>
-          <div>{details}</div>
+          <div className="mr-5">{details}</div>
 
           <div className="p-1 text-sm mt-4">Select Size: </div>
-          <div className="flex">
+          <div className="flex mr-5">
             <button
               className={
                 size === 0
