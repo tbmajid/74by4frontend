@@ -23,7 +23,7 @@ const ProductDetails = ({ product, products }) => {
         <div>
           <img
             src={urlFor(image && image[index])}
-            className="w-11/12 md:w-full cursor-pointer self-center"
+            className="w-11/12 sm:w-max mr-5 cursor-pointer self-center"
           />
 
           <div className="flex gap-2.5 mt-3">
@@ -43,7 +43,7 @@ const ProductDetails = ({ product, products }) => {
         </div>
 
         <div>
-          <div className=" text-3xl mt-3">{name}</div>
+          <div className="text-3xl mt-3">{name}</div>
           <div className="text-sm py-3">Visual Art by: T Majid </div>
           <div className="text-sm py-3">Product Description: </div>
           <div className="mr-5">{details}</div>
