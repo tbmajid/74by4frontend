@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AiOutlineShopping, BiUserCircle } from "react-icons/ai";
+import { BsFillBasket3Fill } from "react-icons/bs";
 import Image from "next/image";
 
 import Cart from "./Cart";
@@ -25,13 +25,13 @@ const Navbar = () => {
         </Link>
       </p>
       <div className="flex justify-between items-center">
-        <User size={70} />
+        <User />
         <button
           type="button"
           className="text-2xl mr-3 text-gray-800 cursor-pointer relative transition-transform border-none bg-transparent"
           onClick={() => setShowCart(true)}
         >
-          <AiOutlineShopping size={40} />
+          <BsFillBasket3Fill size={40} />
           {totalQuantities > 0 ? (
             <span className="absolute -right-2 text-xs text-white bg-rose-600 w-5 h-5 rounded-full text-center font-semibold">
               {totalQuantities}{" "}
@@ -40,7 +40,6 @@ const Navbar = () => {
             <span></span>
           )}
         </button>
-
         {showCart && <Cart />}
       </div>
     </div>

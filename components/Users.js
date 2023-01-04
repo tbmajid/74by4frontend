@@ -1,4 +1,4 @@
-import { FaUserCircle } from "react-icons/fa";
+import { BsPersonCircle } from "react-icons/bs";
 import { useRouter } from "next/router";
 import { useUser } from "@auth0/nextjs-auth0";
 
@@ -7,8 +7,11 @@ export default function User() {
   const { user, error, isLoading } = useUser();
   if (!user)
     return (
-      <div onClick={() => route.push(`/api/auth/login`)}>
-        <FaUserCircle className="text-2xl text-gray-800 cursor-pointer relative border-none bg-transparent" />
+      <div
+        className="pr-2 cursor-pointer"
+        onClick={() => route.push(`/api/auth/login`)}
+      >
+        <BsPersonCircle size={40} />
       </div>
     );
   return (

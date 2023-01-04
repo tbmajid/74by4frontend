@@ -15,8 +15,7 @@ const Home = ({ products }) => (
           <p className="text-sm text-white p-2 font-light max-w-md">
             Fill your home with inspirational art that inspires you to keep your
             head up! Our posters are created from quality materials printed in
-            the United Kingdom. The museum-grade paper ensures that any design
-            will not corrode with time.
+            the United Kingdom. Free Delivery!
           </p>
         </div>{" "}
         <button className="p-2 border-none  bg-black text-white rounded-lg mt-5 text-xl cursor-pointer w-44">

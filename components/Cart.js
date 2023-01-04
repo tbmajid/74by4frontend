@@ -3,10 +3,11 @@ import Link from "next/link";
 import {
   AiOutlineLeft,
   AiOutlineShopping,
-  AiFillMinusCircle,
   AiOutlineMinusCircle,
   AiOutlinePlusCircle,
 } from "react-icons/ai";
+
+import { BsFillBasket3Fill } from "react-icons/bs";
 
 import toast from "react-hot-toast";
 
@@ -70,13 +71,13 @@ const Cart = () => {
 
         {cartItems.length < 1 && (
           <div className="m-10  text-center">
-            <AiOutlineShopping size={150} />
-            <h3>Your shopping bag is empty</h3>
+            <BsFillBasket3Fill size={150} />
+            <div className=" text-lg mt-2">Your basket is empty</div>
             <Link href="/">
               <button
                 type="button"
                 onClick={() => setShowCart(false)}
-                className="w-full max-w-md py-2.5 text-sm mt-2.5 text-rose-600 text-white cursor-pointer scale-125 ease-linear"
+                className="w-full border-solid rounded-lg max-w-lg p-3 z-40 mb-2 border-none text-xl mt-3 bg-black text-white cursor-pointer scale-100"
               >
                 Continue Shopping
               </button>
