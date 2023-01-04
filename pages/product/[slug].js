@@ -19,11 +19,11 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div>
-      <div className="flex flex-col w-11/12 md:w-full md:flex-row justify-start sm:gap-40 ml-5 md:ml-20 mb-1">
+      <div className="flex flex-col md:flex-row justify-start sm:gap-40 ml-5 md:ml-20 mb-1">
         <div>
           <img
             src={urlFor(image && image[index])}
-            className="w-auto cursor-pointer self-center"
+            className="w-11/12 md:w-full cursor-pointer self-center"
           />
 
           <div className="flex gap-2.5 mt-3">
