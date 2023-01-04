@@ -46,55 +46,55 @@ const ProductDetails = ({ product, products }) => {
           <div className=" text-3xl mt-3">{name}</div>
           <div className="text-sm py-3">Visual Art by: T Majid </div>
           <div className="text-sm py-3">Product Description: </div>
-          <p>{details}</p>
-          <p>
-            <div className="p-1 text-sm mt-4">Select Size: </div>
-            <div className="flex">
-              <button
-                className={
-                  size === 0
-                    ? "mb-2 p-2 m-1 rounded-lg text-lg mt-3 bg-white border-solid border-blue-600 cursor-pointer"
-                    : "shadow-none rounded-lg mb-2 p-2 m-1 border-solid border-slate-200 bg-white text-lg mt-3 cursor-pointer"
-                }
-                onClick={() => setSize(0)}
-              >
-                A4
-                <br />
-                <span className="text-sm"> 21 x 29.7 cm</span>
-                <br />
-                <span className="text-sm"> 16.5 x 23.4 inches</span>
-              </button>
-              <button
-                className={
-                  size === 1
-                    ? "mb-2 p-2 m-1 rounded-lg text-lg mt-3 bg-white border-solid border-blue-600 cursor-pointer"
-                    : "shadow-none rounded-lg mb-2 p-2 m-1 border-solid border-slate-200 bg-white text-lg mt-3 cursor-pointer"
-                }
-                onClick={() => setSize(1)}
-              >
-                A3
-                <br />
-                <span className="text-sm"> 21 x 29.7 cm</span>
-                <br />
-                <span className="text-sm"> 16.5 x 23.4 inches</span>
-              </button>
-              <button
-                className={
-                  size === 2
-                    ? "mb-2 p-2 m-1 rounded-lg text-lg mt-3 bg-white border-solid border-blue-600 cursor-pointer"
-                    : "shadow-none rounded-lg mb-2 p-2 m-1 border-solid border-slate-200 bg-white text-lg mt-3 cursor-pointer"
-                }
-                onClick={() => setSize(2)}
-              >
-                A2
-                <br />
-                <span className="text-sm"> 21 x 29.7 cm</span>
-                <br />
-                <span className="text-sm"> 16.5 x 23.4 inches</span>
-              </button>
-            </div>
-          </p>
-          <p className="font-bold text-2xl mt-10">£{price[size]}</p>
+          <div>{details}</div>
+
+          <div className="p-1 text-sm mt-4">Select Size: </div>
+          <div className="flex">
+            <button
+              className={
+                size === 0
+                  ? "mb-2 p-2 m-1 rounded-lg text-lg mt-3 bg-white border-solid border-blue-600 cursor-pointer"
+                  : "shadow-none rounded-lg mb-2 p-2 m-1 border-solid border-slate-200 bg-white text-lg mt-3 cursor-pointer"
+              }
+              onClick={() => setSize(0)}
+            >
+              A4
+              <br />
+              <span className="text-sm"> 21 x 29.7 cm</span>
+              <br />
+              <span className="text-sm"> 16.5 x 23.4 inches</span>
+            </button>
+            <button
+              className={
+                size === 1
+                  ? "mb-2 p-2 m-1 rounded-lg text-lg mt-3 bg-white border-solid border-blue-600 cursor-pointer"
+                  : "shadow-none rounded-lg mb-2 p-2 m-1 border-solid border-slate-200 bg-white text-lg mt-3 cursor-pointer"
+              }
+              onClick={() => setSize(1)}
+            >
+              A3
+              <br />
+              <span className="text-sm"> 21 x 29.7 cm</span>
+              <br />
+              <span className="text-sm"> 16.5 x 23.4 inches</span>
+            </button>
+            <button
+              className={
+                size === 2
+                  ? "mb-2 p-2 m-1 rounded-lg text-lg mt-3 bg-white border-solid border-blue-600 cursor-pointer"
+                  : "shadow-none rounded-lg mb-2 p-2 m-1 border-solid border-slate-200 bg-white text-lg mt-3 cursor-pointer"
+              }
+              onClick={() => setSize(2)}
+            >
+              A2
+              <br />
+              <span className="text-sm"> 21 x 29.7 cm</span>
+              <br />
+              <span className="text-sm"> 16.5 x 23.4 inches</span>
+            </button>
+          </div>
+
+          <div className="font-bold text-2xl mt-10">£{price[size]}</div>
           <div className="flex gap-5 mt-3 items-center text-xl">
             <h3>Quantity:</h3>
             <p className="flex justify-center items-center">
