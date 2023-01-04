@@ -13,9 +13,8 @@ const Home = ({ products }) => (
             Homemade Mordern Art Prints
           </div>
           <p className="text-sm text-white p-2 font-light max-w-md">
-            Fill your home with inspirational art that inspires you to keep your
-            head up! Our posters are created from quality materials printed in
-            the United Kingdom. Free Delivery!
+            Fill your home with inspirational art! Our posters are created from
+            quality materials printed in the United Kingdom.
           </p>
         </div>{" "}
         <button className="p-2 border-none  bg-black text-white rounded-lg mt-5 text-xl cursor-pointer w-44">
